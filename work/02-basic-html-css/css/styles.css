@@ -1,0 +1,51 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+header,
+footer {
+    background-color: #758A99;
+    text-align: center;
+}
+
+main {
+    background-color: #D1D9E0;
+    height: 100%;
+}
+
+.logo {
+    max-height: 50px;
+}
+
+header {
+    padding: 1rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+header h1 {
+    display: flex;
+    align-items: center;
+    color: #3D3B4F;
+}
+
+footer {
+    padding: 0.5rem;
+}
+
+footer a {
+    color: #392F41;
+}

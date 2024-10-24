@@ -1,0 +1,18 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.back-link {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #f0f0f0;
+    text-decoration: none;
+    color: black;
+}
+
+.message {
+    color: red;
+}

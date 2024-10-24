@@ -1,0 +1,165 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    background-color: #f0f2f5;
+    color: #333;
+}
+
+.chat-app {
+    display: grid;
+    grid-template-areas:
+        "app chat"
+        "outgoing outgoing";
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: auto 50px;
+    height: 100vh;
+    max-height: 100vh;
+    overflow: hidden;
+}
+
+#app,
+#chat {
+    padding: 10px;
+    margin: 0;
+}
+
+#app {
+    grid-area: app;
+    background-color: #fff;
+    border-right: 1px solid #e0e0e0;
+    overflow-y: auto;
+}
+
+#chat {
+    grid-area: chat;
+    background-color: #fff;
+    overflow-y: auto;
+    list-style-type: none;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.error {
+    color: #d9534f;
+    padding: 10px;
+    background-color: #f2dede;
+    border: 1px solid #ebccd1;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+
+.waiting {
+    text-align: center;
+    padding: 10px;
+}
+
+.login,
+.logout,
+.outgoing .chat-form button {
+    margin-bottom: 15px;
+}
+
+.login-form,
+.logout-form,
+.chat-form {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.input,
+.login-username,
+.message {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.form-btn,
+.logout-btn,
+.chat-form button {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.form-btn:hover,
+.logout-btn:hover,
+.chat-form button:hover {
+    background-color: #0056b3;
+}
+
+.messages {
+    list-style-type: none;
+    padding: 0;
+}
+
+.message {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.sender-info {
+    display: flex;
+    align-items: center;
+}
+
+.avatar {
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+.username {
+    font-weight: bold;
+}
+
+.message-text {
+    margin-left: 10px;
+}
+
+.users {
+    list-style-type: none;
+    padding: 0;
+}
+
+.user {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+#outgoing {
+    grid-area: outgoing;
+}
+
+.message-text {
+    width: 100%;
+    margin: 0;
+    padding-left: 1rem;
+}
+
+.outgoing form {
+    display: flex;
+    gap: 10px;
+}
+
+.outgoing input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+}
